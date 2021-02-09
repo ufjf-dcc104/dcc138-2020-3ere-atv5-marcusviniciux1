@@ -18,4 +18,9 @@ export default class Cena {
     adicionar(sprites){
         this.sprites.push(sprites);
     }
+    passo(dt){
+        for (const sprite of this.sprites) {
+            sprite.passo(dt);
+        }
+    }
 }
