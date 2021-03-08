@@ -94,7 +94,7 @@ export default class Cena {
     this.mapa = mapa;
     this.mapa.cena = this;
   }
-  criaSpritesAleatorios(n) {
+  criaSpritesAleatorios(n = 1) {
     let sprites = [];
     for (let i = 0; i < n; i++) {
       let sprite = new Sprite({
@@ -127,5 +127,10 @@ export default class Cena {
       cor += letras[Math.floor(Math.random() * 16)];
     }
     return cor;
+  }
+  reposicionarSprite(tempo){
+    setInterval(() => {
+      this.adicionaSpritesAleatorios(1);
+    }, tempo);
   }
 }
