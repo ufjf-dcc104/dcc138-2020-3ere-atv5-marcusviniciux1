@@ -17,22 +17,17 @@ export default class Mapa {
       for (let c = 0; c < this.COLUNAS; c++) {
         switch (this.tiles[l][c]) {
           case 1:
-            ctx.fillStyle = "SlateGray";
-            ctx.lineWidth = 1;
-            ctx.strokeStyle = "white";
+            ctx.drawImage(this.cena.assets.img("goal"), c*this.SIZE, l*this.SIZE);
             break;
           case 2:
-            ctx.fillStyle = "white";
-            ctx.lineWidth = 2;
-            ctx.strokeStyle = "white";
+            ctx.drawImage(this.cena.assets.img("terrain"), c*this.SIZE, l*this.SIZE);
+            break;
+          case 3:
+            ctx.drawImage(this.cena.assets.img("orc1"), c*this.SIZE, l*this.SIZE);
             break;
           default:
-            ctx.fillStyle = "green";
-            ctx.lineWidth = 1;
-            ctx.strokeStyle = "green";
+            ctx.drawImage(this.cena.assets.img("grass"), c*this.SIZE, l*this.SIZE);
         }
-        ctx.fillRect(c * this.SIZE, l * this.SIZE, this.SIZE, this.SIZE);
-        ctx.strokeRect(c * this.SIZE, l * this.SIZE, this.SIZE, this.SIZE);
       }
     }
   }
