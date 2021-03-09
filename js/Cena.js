@@ -99,10 +99,10 @@ export default class Cena {
     let sprites = [];
     for (let i = 0; i < n; i++) {
       let sprite = new Sprite({
-        x: this.valorAleatorio(50, 480),
-        y: this.valorAleatorio(50, 352),
-        vx: this.valorAleatorio(-10, 10),
-        vy: this.valorAleatorio(-10, 10),
+        x: this.valorAleatorio(45, 435),
+        y: this.valorAleatorio(45, 310),
+        vx: this.valorAleatorio(-20, 20),
+        vy: this.valorAleatorio(-20, 20),
         color: this.corAleatoria(),
       });
       sprites.push(sprite);
