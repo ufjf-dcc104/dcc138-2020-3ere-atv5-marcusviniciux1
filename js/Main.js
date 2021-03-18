@@ -1,13 +1,13 @@
 import AssetManager from "./AssetManager.js";
 import Cena from "./Cena.js";
 import CenaJogo from "./CenaJogo.js";
+import CenaCarregando from "./CenaCarregando.js";
 import Sprite from "./Sprite.js";
 import Mixer from "./Mixer.js";
 import Mapa from "./Mapa.js";
 import modeloMapa1 from "../maps/mapa1.js";
 import InputManager from "./InputManager.js";
 import Game from "./Game.js";
-import CenaCarregando from "./CenaCarregando.js";
 
 const input = new InputManager();
 const mixer= new Mixer(10);
@@ -27,10 +27,11 @@ const canvas = document.querySelector("canvas");
 canvas.width = 15*32;
 canvas.height = 11*32;
 input.configurarTeclado({
-  "ArrowLeft": "MOVE_ESQUERDA",
-  "ArrowRight": "MOVE_DIREITA",
-  "ArrowUp": "MOVE_CIMA",
-  "ArrowDown": "MOVE_BAIXO",
+  ArrowLeft: "MOVE_ESQUERDA",
+  ArrowRight: "MOVE_DIREITA",
+  ArrowUp: "MOVE_CIMA",
+  ArrowDown: "MOVE_BAIXO",
+  " ": "PROXIMA_CENA",
 });
 
 const game = new Game(canvas, assets, input);
