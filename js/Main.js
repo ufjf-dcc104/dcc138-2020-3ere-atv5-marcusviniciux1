@@ -29,7 +29,7 @@ input.configurarTeclado({
   "ArrowRight": "MOVE_DIREITA",
   "ArrowUp": "MOVE_CIMA",
   "ArrowDown": "MOVE_BAIXO",
-  });
+});
 
 const game = new Game(canvas, assets, input);
 
@@ -72,20 +72,20 @@ cena1.adicionar(new Sprite({ x: 115, y: 160, vy: -10, color: "red", controlar: p
 cena1.adicionaSpritesAleatorios(10);
 cena1.reposicionarSprite(4000);
 
-cena1.iniciar();
+game.iniciar();
 
 document.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "s":
-      cena1.iniciar();
+      game.iniciar();
       break;
     case "S":
-      cena1.parar();
+      game.parar();
       break;
-      case "c":
+    case "c":
       assets.play("moeda");
       break;
-      case "b":
+    case "b":
       assets.play("boom");
       break;
   }
