@@ -6,19 +6,19 @@ export default class CenaFim extends Cena {
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.font = "20px Impact";
     this.ctx.fillStyle = "red";
-    this.ctx.TextAlign = "center";
+    this.ctx.textAlign = "center";
     this.ctx.fillText(
       "GAME OVER",
-      this.canvas.width / 2.5,
-      this.canvas.height / 2
+      this.canvas.width / 2,
+      this.canvas.height / 3
     );
 
     if (this.assets.acabou()) {
-        this.ctx.fillStyle = "yellow";
+      this.ctx.fillStyle = "yellow";
       this.ctx.fillText(
         "Aperte espaço para jogar novamente",
-        this.canvas.width / 5.3,
-        this.canvas.height / 2 + 40
+        this.canvas.width / 2,
+        2*this.canvas.height / 3 
       );
     }
   }

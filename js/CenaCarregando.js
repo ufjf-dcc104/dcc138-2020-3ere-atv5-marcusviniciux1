@@ -6,18 +6,18 @@ export default class CenaCarregando extends Cena {
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.font = "20px Impact";
     this.ctx.fillStyle = "yellow";
-    this.ctx.TextAlign = "center";
+    this.ctx.textAlign = "center";
     this.ctx.fillText(
       this.assets?.progresso(),
-      this.canvas.width / 2.3,
-      this.canvas.height / 2
+      this.canvas.width / 2,
+      this.canvas.height / 3
     );
 
     if (this.assets.acabou()) {
       this.ctx.fillText(
         "Aperte espaço para continuar",
-        this.canvas.width / 4,
-        this.canvas.height / 2 + 40
+        this.canvas.width / 2,
+        2*this.canvas.height / 3
       );
     }
   }
