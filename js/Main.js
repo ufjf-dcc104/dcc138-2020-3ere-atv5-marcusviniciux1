@@ -23,6 +23,7 @@ assets.carregaImagem("garota", "assets/garota.png");
 assets.carregaImagem("orc", "assets/orc.png");
 assets.carregaImagem("esqueleto", "assets/skelly.png");
 assets.carregaAudio("moeda", "assets/coin.wav");
+assets.carregaAudio("cogu", "assets/cogusom.wav");
 assets.carregaAudio("boom", "assets/boom.wav");
 
 const canvas = document.querySelector("canvas");

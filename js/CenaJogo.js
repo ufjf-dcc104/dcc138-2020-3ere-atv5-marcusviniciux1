@@ -17,10 +17,15 @@ export default class CenaJogo extends Cena {
             this.game.selecionaCena("fim");
         }
         else if (a.tags.has("pc") && b.tags.has("cogu")) {
+          this.assets.play("cogu"); 
           if (!this.aRemover.includes(b)) 
             {
-                this.aRemover.push(b)    
+              this.aRemover.push(b)    
             }
+        }
+        else if (a.tags.has("enemy") && b.tags.has("cogu"))
+        {
+          return;
         }
         else{
           if (!this.aRemover.includes(a)) 
@@ -31,8 +36,7 @@ export default class CenaJogo extends Cena {
           {
               this.aRemover.push(b)    
           }
-        }
-        this.assets.play("boom");  
+        } 
       }
       preparar(){
         super.preparar();
