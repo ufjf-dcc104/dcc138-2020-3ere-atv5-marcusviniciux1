@@ -5,7 +5,7 @@ export default class CenaCarregando extends Cena {
     this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.ctx.font = "20px Impact";
-    this.ctx.fillStyle = "yellow";
+    this.ctx.fillStyle = "white";
     this.ctx.textAlign = "center";
     this.ctx.fillText(
       this.assets?.progresso(),

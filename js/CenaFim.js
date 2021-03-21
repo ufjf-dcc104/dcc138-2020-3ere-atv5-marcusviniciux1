@@ -14,7 +14,8 @@ export default class CenaFim extends Cena {
     );
 
     if (this.assets.acabou()) {
-      this.ctx.fillStyle = "yellow";
+      this.ctx.fillText(`${this.game.cogumelos}/3 cogumelos coletados!`, this.canvas.width/2, this.canvas.height/3+30);
+      this.ctx.fillStyle = "white";
       this.ctx.fillText(
         "Aperte espaço para jogar novamente",
         this.canvas.width / 2,

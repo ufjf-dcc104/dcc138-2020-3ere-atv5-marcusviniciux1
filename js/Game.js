@@ -6,6 +6,7 @@ export default class Game {
         this.input = input
         this.cenas = new Map();
         this.cena = null;
+        this.cogumelos = 0;
     }
     adicionarCena(chave, cena){
         this.cenas.set(chave, cena);
@@ -31,5 +32,9 @@ export default class Game {
     }
     parar(){
         this.cena?.parar();
+    }
+    pontuacao()
+    {
+        this.cogumelos++;
     }
 }
