@@ -5,14 +5,32 @@ import Sprite from "./Sprite.js";
 
 export default class CenaJogo extends Cena {
     quandoColidir(a, b) {
-        if (!this.aRemover.includes(a)) {
-          this.aRemover.push(a);
-        }
-        if (!this.aRemover.includes(b)) {
-          this.aRemover.push(b);
-        }
-        if(a.tags.has("pc") && b.tags.has("enemy")){
+        if (a.tags.has("pc") && b.tags.has("enemy")) {
+          if (!this.aRemover.includes(a)) 
+            {
+                this.aRemover.push(a)    
+            }
+            if (!this.aRemover.includes(b)) 
+            {
+                this.aRemover.push(b)    
+            }
             this.game.selecionaCena("fim");
+        }
+        else if (a.tags.has("pc") && b.tags.has("cogu")) {
+          if (!this.aRemover.includes(b)) 
+            {
+                this.aRemover.push(b)    
+            }
+        }
+        else{
+          if (!this.aRemover.includes(a)) 
+          {
+              this.aRemover.push(a)    
+          }
+          if (!this.aRemover.includes(b)) 
+          {
+              this.aRemover.push(b)    
+          }
         }
         this.assets.play("boom");  
       }
@@ -52,8 +70,13 @@ export default class CenaJogo extends Cena {
         en1.controlar = perseguePC;
         this.adicionar(en1);
         this.adicionar(new Sprite({ x: 360, y: 260, vy: 10, color: "red", controlar: perseguePC, tags:["enemy"], assets: this.assets}));
-        this.adicionaSpritesAleatorios(10);
-        this.reposicionarSprite(4000);
+        
+        this.adicionar(new Sprite({ x: 230, y: 50, tags: ["cogu"], assets: this.assets }));
+        this.adicionar(new Sprite({ x: 230, y: 166, tags: ["cogu"], assets: this.assets }));
+        this.adicionar(new Sprite({ x: 230, y: 290, tags: ["cogu"], assets: this.assets }));
+        
+        //this.adicionaSpritesAleatorios(10);
+        //this.reposicionarSprite(4000);
 
       }
 }
