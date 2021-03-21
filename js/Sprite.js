@@ -11,7 +11,8 @@ export default class Sprite {
     vx = 0,
     vy = 0,
     controlar = ()=>{},
-    tags = []
+    tags = [],
+    assets = null
   } = {}) {
     this.x = x;
     this.y = y;
@@ -23,6 +24,7 @@ export default class Sprite {
     this.cena = null;
     this.mx = 0;
     this.my = 0;
+    this.assets = assets;
     this.controlar = controlar;
     this.tags = new Set();
     tags.forEach((tag) => { 
@@ -30,8 +32,19 @@ export default class Sprite {
     });
   }
   desenhar(ctx) {
-    ctx.fillStyle = this.color;
-    ctx.fillRect(this.x - this.w / 2, this.y - this.h / 2, this.w, this.h);
+    if (this.tags.has("pc")) 
+        {
+            ctx.drawImage(this.assets.img("rogueknight"), 0, 0, 50, 37, this.x - this.w / 2, this.y - this.h / 2, 50, 37);
+        }
+        else if (this.tags.has("enemy"))
+        {
+            ctx.drawImage(this.assets.img("orc1"), 0, 0, 30, 30, this.x - this.w / 2, this.y - this.h / 2, 30, 30);
+        }
+        else
+        {
+            ctx.fillStyle = this.color;
+            ctx.fillRect(this.x - this.w / 2, this.y - this.h / 2, this.w, this.h);
+        }
     ctx.strokeStyle = "blue";
     ctx.strokeRect(
       this.mx * this.cena.mapa.SIZE,

@@ -10,6 +10,7 @@ const input = new InputManager();
 const mixer= new Mixer(10);
 const assets = new AssetManager(mixer);
 
+assets.carregaImagem("rogueknight", "assets/rogueknight.png");
 assets.carregaImagem("grama", "assets/grama.png");
 assets.carregaImagem("cogu", "assets/cogu.png");
 assets.carregaImagem("arvore", "assets/arvore.png");
