@@ -17,16 +17,25 @@ export default class Mapa {
       for (let c = 0; c < this.COLUNAS; c++) {
         switch (this.tiles[l][c]) {
           case 1:
-            ctx.drawImage(this.cena.assets.img("goal"), c*this.SIZE, l*this.SIZE);
+            ctx.drawImage(this.cena.assets.img("cogu"), c*this.SIZE, l*this.SIZE);
             break;
           case 2:
-            ctx.drawImage(this.cena.assets.img("terrain"), c*this.SIZE, l*this.SIZE);
+            ctx.drawImage(this.cena.assets.img("arvore"), c*this.SIZE, l*this.SIZE);
             break;
           case 3:
-            ctx.drawImage(this.cena.assets.img("orc1"), c*this.SIZE, l*this.SIZE);
+            ctx.drawImage(this.cena.assets.img("cerca1"), c*this.SIZE, l*this.SIZE);
+            break;
+          case 4:
+            ctx.drawImage(this.cena.assets.img("cerca2"), c*this.SIZE, l*this.SIZE);
+            break;
+          case 5:
+            ctx.drawImage(this.cena.assets.img("cerca3"), c*this.SIZE, l*this.SIZE);
+            break;
+          case 6:
+            ctx.drawImage(this.cena.assets.img("cerca4"), c*this.SIZE, l*this.SIZE);
             break;
           default:
-            ctx.drawImage(this.cena.assets.img("grass"), c*this.SIZE, l*this.SIZE);
+            ctx.drawImage(this.cena.assets.img("grama"), c*this.SIZE, l*this.SIZE);
         }
       }
     }

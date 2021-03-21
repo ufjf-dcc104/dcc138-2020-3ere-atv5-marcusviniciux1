@@ -12,7 +12,7 @@ export default class Cena {
     this.preparar();
   }
   desenhar() {
-    this.ctx.fillStyle = "lightblue";
+    this.ctx.fillStyle = "#2F8136";
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.mapa?.desenhar(this.ctx);
     if (this.assets.acabou()) {

@@ -10,9 +10,13 @@ const input = new InputManager();
 const mixer= new Mixer(10);
 const assets = new AssetManager(mixer);
 
-assets.carregaImagem("grass", "assets/grass.png");
-assets.carregaImagem("terrain", "assets/terrain.png");
-assets.carregaImagem("goal", "assets/goal.png");
+assets.carregaImagem("grama", "assets/grama.png");
+assets.carregaImagem("cogu", "assets/cogu.png");
+assets.carregaImagem("arvore", "assets/arvore.png");
+assets.carregaImagem("cerca1", "assets/cerca1.png");
+assets.carregaImagem("cerca2", "assets/cerca2.png");
+assets.carregaImagem("cerca3", "assets/cerca3.png");
+assets.carregaImagem("cerca4", "assets/cerca4.png");
 assets.carregaImagem("orc1", "assets/orc1.png");
 assets.carregaImagem("garota", "assets/garota.png");
 assets.carregaImagem("orc", "assets/orc.png");
