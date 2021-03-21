@@ -42,7 +42,11 @@ export default class Sprite {
         }
         else if (this.tags.has("cogu"))
         {
-            ctx.drawImage(this.assets.img("cogu"), 0, 0, 30, 30, this.x, this.y, this.w, this.h);
+            ctx.drawImage(this.assets.img("cogu"), 0, 0, 30, 30, this.x - this.w / 2, this.y - this.h / 2, 30, 30);
+        }
+        else if (this.tags.has("flor"))
+        {
+            ctx.drawImage(this.assets.img("flor"), 0, 0, 30, 51, this.x - this.w / 2, this.y - this.h / 2, 30, 51);
         }
         else
         {

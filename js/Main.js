@@ -19,11 +19,12 @@ assets.carregaImagem("cerca2", "assets/cerca2.png");
 assets.carregaImagem("cerca3", "assets/cerca3.png");
 assets.carregaImagem("cerca4", "assets/cerca4.png");
 assets.carregaImagem("orc1", "assets/orc1.png");
+assets.carregaImagem("flor", "assets/flor.png");
 assets.carregaImagem("garota", "assets/garota.png");
 assets.carregaImagem("orc", "assets/orc.png");
 assets.carregaImagem("esqueleto", "assets/skelly.png");
 assets.carregaAudio("moeda", "assets/coin.wav");
-assets.carregaAudio("cogu", "assets/cogusom.wav");
+assets.carregaAudio("cogusom", "assets/cogusom.wav");
 assets.carregaAudio("boom", "assets/boom.wav");
 
 const canvas = document.querySelector("canvas");
@@ -41,10 +42,12 @@ const game = new Game(canvas, assets, input);
 
 const cena0 = new CenaCarregando();
 const cena1 = new CenaJogo();
-const cena2 = new CenaFim();
+const cena2 = new CenaJogo();
+const cena3 = new CenaFim();
 game.adicionarCena("carregando", cena0);
-game.adicionarCena("jogo", cena1);
-game.adicionarCena("fim", cena2);
+game.adicionarCena("jogo", cena1, 1);
+game.adicionarCena("jogo2", cena2, 2);
+game.adicionarCena("fim", cena3);
 
 game.iniciar();
 

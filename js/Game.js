@@ -8,13 +8,14 @@ export default class Game {
         this.cena = null;
         this.cogumelos = 0;
     }
-    adicionarCena(chave, cena){
+    adicionarCena(chave, cena, mapa){
         this.cenas.set(chave, cena);
         cena.game = this;
         cena.canvas = this.canvas;
         cena.ctx = this.ctx;
         cena.assets = this.assets;
         cena.input = this.input;
+        cena.mapa = mapa;
         if(this.cena === null){
             this.cena = cena;
         }
