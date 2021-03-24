@@ -103,8 +103,8 @@ export default class CenaJogo extends Cena {
         this.adicionar(new Sprite({ x: 240, y: 290, w:30, h:30, tags: ["cogu"], assets: this.assets }));
         this.adicionar(new Sprite({ x: 440, y: 166, w:30, h:30,tags: ["flor"], assets: this.assets }));
 
-        //this.adicionaSpritesAleatorios(10);
-        //this.reposicionarSprite(4000);
+        this.adicionaSpritesAleatorios(3);
+        this.reposicionarSprite(4000);
 
       }
 }
